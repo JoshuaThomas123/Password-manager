@@ -1,25 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
+using PasswordManager.Data;
+using PasswordManager.Models;
 
 class Program
 {
     static void Main()
     {
-        var entries = new List<(string Web, string User, string Pass)>();
+        var repo = new PasswordRepository();
 
         while (true)
         {
-            Console.WriteLine("\n--- Password Manager ---");
-            Console.WriteLine("1. Add password");
+            Console.WriteLine("\n1. Add password");
             Console.WriteLine("2. View all");
             Console.WriteLine("3. Quit");
-            Console.Write("Choose an option: ");
+            Console.Write("Choice: ");
 
             string choice = Console.ReadLine();
 
             if (choice == "1")
             {
-                Console.Write("Web domain: ");
+                Console.Write("Web: ");
                 string web = Console.ReadLine();
 
                 Console.Write("Username: ");
@@ -28,37 +28,27 @@ class Program
                 Console.Write("Password: ");
                 string pass = Console.ReadLine();
 
-                entries.Add((web, user, pass));
-                Console.WriteLine("Saved!");
+                repo.Add(new PasswordEntry
+                {
+                    WebDomain = web,
+                    Username = user,
+                    Password = pass
+                });
+
+                Console.WriteLine("Saved to MongoDB!");
             }
             else if (choice == "2")
             {
-                Console.WriteLine("\n--- Saved Passwords ---");
-
-                if (entries.Count == 0)
+                var entries = repo.GetAll();
+                foreach (var e in entries)
                 {
-                    Console.WriteLine("No entries yet.");
-                }
-                else
-                {
-                    for (int i = 0; i < entries.Count; i++)
-                    {
-                        Console.WriteLine(
-                            $"{i + 1}. {entries[i].Web} | {entries[i].User} | {entries[i].Pass}"
-                        );
-                    }
+                    Console.WriteLine($"{e.WebDomain} | {e.Username} | {e.Password}");
                 }
             }
             else if (choice == "3")
             {
-                Console.WriteLine("Goodbye!");
-                break; // exit while loop
-            }
-            else
-            {
-                Console.WriteLine("Invalid option.");
+                break;
             }
         }
     }
 }
-
