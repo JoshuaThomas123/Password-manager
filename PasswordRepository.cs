@@ -11,29 +11,35 @@ namespace PasswordManager.Data
 
         public PasswordRepository()
         {
-            try
-            {
-                var client = new MongoClient("mongodb://localhost:27017");
-                var database = client.GetDatabase("PasswordManagerDB");
-                _collection = database.GetCollection<PasswordEntry>("Passwords");
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("PasswordManagerDB");
+            _collection = database.GetCollection<PasswordEntry>("Passwords");
 
-                Console.WriteLine("✅ Connected to MongoDB");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("❌ MongoDB connection failed: " + ex.Message);
-            }
+            Console.WriteLine("Connected to MongoDB");
         }
 
+        // CREATE
         public void Add(PasswordEntry entry)
         {
             _collection.InsertOne(entry);
-            Console.WriteLine("✅ Inserted into MongoDB");
+            Console.WriteLine("Saved to MongoDB");
         }
 
+        // READ
         public List<PasswordEntry> GetAll()
         {
             return _collection.Find(_ => true).ToList();
+        }
+
+        // DELETE
+        public void DeleteById(string id)
+        {
+            var result = _collection.DeleteOne(e => e.Id == id);
+
+            if (result.DeletedCount > 0)
+                Console.WriteLine("🗑️ Deleted successfully");
+            else
+                Console.WriteLine("⚠️ No entry found with that ID");
         }
     }
 }
