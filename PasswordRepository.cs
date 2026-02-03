@@ -37,9 +37,9 @@ namespace PasswordManager.Data
             var result = _collection.DeleteOne(e => e.Id == id);
 
             if (result.DeletedCount > 0)
-                Console.WriteLine("🗑️ Deleted successfully");
+                Console.WriteLine("Deleted successfully");
             else
-                Console.WriteLine("⚠️ No entry found with that ID");
+                Console.WriteLine("No entry found with that ID");
         }
     }
 }

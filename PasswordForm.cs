@@ -61,7 +61,6 @@ namespace PasswordManager
                 listBox.Items.Add(entry);
             }
 
-            listBox.DisplayMember = "WebDomain";
         }
 
         private void Add_Click(object? sender, EventArgs e)
