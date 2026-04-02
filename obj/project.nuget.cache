@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AdDrO7X5dOI=",
+  "dgSpecHash": "Zlne4UzXB80=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jt110\\OneDrive\\Desktop\\Password-manager\\MyApp.csproj",
+  "projectFilePath": "C:\\Users\\jt110\\Downloads\\Password-manager-main\\Password-manager-main\\Password-manager\\MyApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jt110\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\jt110\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jt110\\OneDrive\\Desktop\\Password-manager\\MyApp.csproj": {}
+    "C:\\Users\\jt110\\Downloads\\Password-manager-main\\Password-manager-main\\Password-manager\\MyApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jt110\\OneDrive\\Desktop\\Password-manager\\MyApp.csproj": {
+    "C:\\Users\\jt110\\Downloads\\Password-manager-main\\Password-manager-main\\Password-manager\\MyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jt110\\OneDrive\\Desktop\\Password-manager\\MyApp.csproj",
+        "projectUniqueName": "C:\\Users\\jt110\\Downloads\\Password-manager-main\\Password-manager-main\\Password-manager\\MyApp.csproj",
         "projectName": "MyApp",
-        "projectPath": "C:\\Users\\jt110\\OneDrive\\Desktop\\Password-manager\\MyApp.csproj",
+        "projectPath": "C:\\Users\\jt110\\Downloads\\Password-manager-main\\Password-manager-main\\Password-manager\\MyApp.csproj",
         "packagesPath": "C:\\Users\\jt110\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jt110\\OneDrive\\Desktop\\Password-manager\\obj\\",
+        "outputPath": "C:\\Users\\jt110\\Downloads\\Password-manager-main\\Password-manager-main\\Password-manager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jt110\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jt110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net7.0-windows7.0": {
@@ -86,7 +88,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
